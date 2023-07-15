@@ -1042,8 +1042,16 @@
 									form.addClass('form-in-process');
 
 									if (output.hasClass("snackbars")) {
-										output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
-										output.addClass("active");
+										document.getElementById("load").style.display="block"
+										$.ajax({
+											url:"https://script.google.com/macros/s/AKfycbwCVNvPVXwoXnay5Ugr7Eq1JxQ3lDMItahMOh_4q1YYJ1ax6fREUFvphzJ6QrK-uhsI/exec",
+											data:$("#Contact-form").serialize(),
+											method:"post",
+											success:function (response){
+												window.location.reload()
+												//window.location.href="https://google.com"
+											},
+										});
 									}
 								} else {
 									return false;
@@ -1085,6 +1093,7 @@
 								if (result === "MF000") {
 									if (output.hasClass("snackbars")) {
 										output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
+										
 									} else {
 										output.addClass("active success");
 									}
