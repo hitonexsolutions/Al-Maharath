@@ -19081,10 +19081,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 /* --------------- */
 
 
-body{
-	background: rgb(94,27,7);
-  background: linear-gradient(90deg, rgba(94,27,7,0.9699230033810399) 0%, rgba(140,85,18,0.9531162806919643) 85%);
-  }
   .pen-information{
 	text-align: center;
 	color: #ffffff;
